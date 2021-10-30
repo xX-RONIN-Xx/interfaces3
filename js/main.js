@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
     document.querySelector('.inf').addEventListener('click', () => {
         swal({
             title: "Objetivo: ",
-            text: ("Obtener 10.000 puntos para ganar. Para ello evita colisionar con el enemigo y recoge todas las gemas que puedas. Cada gema suma 100 puntos. Las animaciones keyframe estan en el personaje cuando corre, cuando salta y cuando muere. Tambien en el npc y en las gemas.")
+            text: ("Obtener 3000 puntos para ganar. Para ello evita colisionar con el enemigo y recoge todas las gemas que puedas. Cada gema suma 100 puntos. Las animaciones keyframe estan en el personaje cuando corre, cuando salta y cuando muere. Tambien en el npc, en las gemas y en los fondos.")
         });
     })
 
@@ -223,7 +223,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Función para saber si se gano el juego
     function isWonGame() {
-        return points.innerHTML >= 10000;
+        return points.innerHTML >= 3000;
     }
 
     // Funcion para el manejo de la puntuacion
