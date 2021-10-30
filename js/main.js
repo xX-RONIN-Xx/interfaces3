@@ -1,6 +1,13 @@
 "use strict";
 
+
+
 document.addEventListener('DOMContentLoaded', () => {
+
+document.querySelector('.inf').addEventListener('click',()=>{
+    swal({title: "Objetivo: ",
+        text:("Obtener 10.000 puntos para ganar. Para ello evita colisionar con el enemigo y recoge todas las gemas que puedas. Cada gema suma 100 puntos. Las animaciones keyframe estan en el personaje cuando corre, cuando salta y cuando muere. Tambien en el npc y en las gemas.")});
+})
 
     let avatares = document.querySelector('#avatares');
     let botonPersonaje = document.querySelector('#personaje');
