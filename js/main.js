@@ -4,10 +4,12 @@
 
 document.addEventListener('DOMContentLoaded', () => {
 
-document.querySelector('.inf').addEventListener('click',()=>{
-    swal({title: "Objetivo: ",
-        text:("Obtener 10.000 puntos para ganar. Para ello evita colisionar con el enemigo y recoge todas las gemas que puedas. Cada gema suma 100 puntos. Las animaciones keyframe estan en el personaje cuando corre, cuando salta y cuando muere. Tambien en el npc y en las gemas.")});
-})
+    document.querySelector('.inf').addEventListener('click', () => {
+        swal({
+            title: "Objetivo: ",
+            text: ("Obtener 10.000 puntos para ganar. Para ello evita colisionar con el enemigo y recoge todas las gemas que puedas. Cada gema suma 100 puntos. Las animaciones keyframe estan en el personaje cuando corre, cuando salta y cuando muere. Tambien en el npc y en las gemas.")
+        });
+    })
 
     let avatares = document.querySelector('#avatares');
     let botonPersonaje = document.querySelector('#personaje');
@@ -17,12 +19,32 @@ document.querySelector('.inf').addEventListener('click',()=>{
         nodos[0].addEventListener('click', (e) => {
             document.querySelector('#player').classList.background = "url('./img/run-Sailor\ Moon\ \(1\).png')";
             avatares.hidden = true;
+            //si el personaje muere reinicia el juego al presionar enter
+            document.onkeyup = e => {
+                if (e.code == 'Enter') {
+                    player.hidden = false;
+                    if (gameOver) {
+                        resetGame();
+                    }
+                }
+            }
+            document.querySelector('#info-secondary').hidden = false;
         })
         nodos[1].addEventListener('click', (e) => {
             document.querySelector("#player").classList.background = "url('./img/run-Sailor\ Mars.png')";
             player.classList.add('player-run-right1');
             player.hidden = true;
             avatares.hidden = true;
+            //si el personaje muere reinicia el juego al presionar enter
+            document.onkeyup = e => {
+                if (e.code == 'Enter') {
+                    player.hidden = false;
+                    if (gameOver) {
+                        resetGame();
+                    }
+                }
+            }
+            document.querySelector('#info-secondary').hidden = false;
         })
     })
 
@@ -90,15 +112,7 @@ document.querySelector('.inf').addEventListener('click',()=>{
         }
 
     }
-    //si el personaje muere reinicia el juego al presionar enter
-    document.onkeyup = e => {
-        if (e.code == 'Enter') {
-            player.hidden = false;
-            if (gameOver) {
-                resetGame();
-            }
-        }
-    }
+
 
     let gameLoop = () => {
         if (!gameOver) {
@@ -110,16 +124,20 @@ document.querySelector('.inf').addEventListener('click',()=>{
 
             /** Función para saber si recolecto una moneda **/
             if (grabCoin(playerPosX, playerPosY, playerWidth, playerHeight,
-                coinPosX, coinPosY, coinWidth, coinHeight)) {
+                    coinPosX, coinPosY, coinWidth, coinHeight)) {
                 increasePoints(100);
                 coin.classList.remove('coin-animated');
+                document.querySelector('#moneda').hidden = false;
+                setTimeout(() => {
+                    document.querySelector('#moneda').hidden = true;
+                }, 700);
             }
 
 
             /** Función para saber si el juego debe terminar **/
             if (isGameOver(playerPosX, playerPosY, playerWidth,
-                playerHeight, npcPosX, npcPosY, npcWidth,
-                npcHeight)) {
+                    playerHeight, npcPosX, npcPosY, npcWidth,
+                    npcHeight)) {
                 gameOver = true;
                 window.cancelAnimationFrame(gameLoop);
 
