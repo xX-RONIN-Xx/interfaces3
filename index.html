@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Juego Sailor Moon</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Birthstone+Bounce:wght@500&family=Noto+Sans&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <h1 id="titulo" class="center">Sailor Moon</h1>
+    <div id="game-runner">
+        <div id="background-far" class="animation far">
+            <p id="score">SCORE: <span id="points">0</span></p>
+            <div id="game-info" class="no-visibility">
+                <p id="info-secondary">Presione 'enter' para comenzar el juego</p>
+                <p class="par">Presione 'space' para saltar</p>
+
+                <p class="par">1-Obtener 10.000 puntos. 2-Evitar colisionar con el enemigo. 3-Cada gema suma 100 puntos.
+                </p>
+                <div><input type="button" id="personaje" value=" Elegir personaje" class="btn btn-outline-light">
+                    <div id="avatares" hidden>
+                        <img src="./img/sailor-moon.png" class="img" alt="cara de serena">
+                        <img src="./img/sailor-mars.png" class="img" alt="cara de SailorMars">
+                    </div>
+                </div>
+                <p id="info-primary" class="no-visibility">GAME OVER</p>
+            </div>
+        </div>
+        <div id="building-back" class="animation building">
+        </div>
+        <div id="ground" class="animation ground"></div>
+        <div id="player" class="player player-run-right"></div>
+        <div id="npc" class="npc-run"></div>
+        <div id="coin" class="coin-animated"></div>
+        <div id="hit" class="golpe"></div>
+    </div>
+
+    </div>
+
+
+    </div>
+
+    <footer>
+        <small>Copyright &copy;2021 All rights reserved. | This page was made by Benítez, J Mauricio & Correa, Rocío
+            del Milagro</small>
+    </footer>
+
+    <script src="js/main.js"></script>
+</body>
+
+</html>

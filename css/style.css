@@ -1,0 +1,369 @@
+  body {
+      background-image: url('../img/1xlg953brl941.png');
+      background-size: cover;
+      margin: 0%;
+  }
+
+  #titulo.center {
+      font-family: 'Birthstone Bounce', cursive !important;
+      align-items: center;
+      font-size: 40px;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      text-shadow: -2px -2px 1px #000, 2px 2px 1px #000, -2px 2px 1px #000, 2px -2px 1px #000;
+  }
+
+  .center {
+      text-align: center;
+      color: rgb(247, 234, 247) !important;
+  }
+
+  .inst {
+      display: flex;
+      flex-wrap: nowrap;
+      justify-content: space-evenly;
+      text-align: center;
+  }
+
+  h2 {
+      margin: 0;
+      font-family: 'Birthstone Bounce', cursive !important;
+      color: white;
+      text-shadow: rgb(150, 10, 150)!important;
+      font-size: 35px;
+  }
+
+  li {
+      list-style-type: square;
+  }
+
+  .par {
+      font-size: 22px !important;
+      color: white;
+      margin-top: 35px;
+      text-shadow: -2px -2px 1px #000, 2px 2px 1px #000, -2px 2px 1px #000, 2px -2px 1px #000;
+  }
+
+  footer {
+      clear: both;
+      margin-top: 7%;
+      color: white !important;
+      text-shadow: rgb(218, 46, 218) !important;
+      text-align: center;
+  }
+
+  .game-instructions {
+      margin-top: 15px;
+  }
+
+  /*PERSONAJE*/
+
+  #personaje {
+      box-shadow: -3px -3px 1.5px #000, 3px 3px 1.5px #000, -3px 3px 1.5px #000, 3px -3px 1.5px #000;
+      font-size: 20px;
+      border-radius: 8px;
+      background-color: #b23cfd;
+      color: white;
+      margin-top: 20px;
+      border: 4px solid white;
+      text-shadow: -2px -2px 1px #000, 2px 2px 1px #000, -2px 2px 1px #000, 2px -2px 1px #000;
+  }
+
+  .img {
+      margin-top: 30px;
+      width: 250px;
+  }
+
+  #info-secondary, #score {
+      text-shadow: -2px -2px 1px #000, 2px 2px 1px #000, -2px 2px 1px #000, 2px -2px 1px #000;
+      font-size: 30px !important;
+  }
+
+  .player {
+      z-index: 5;
+      height: 150px;
+      position: absolute;
+      bottom: -1%;
+  }
+
+  .player-run-right {
+      width: 100px;
+      left: 15%;
+      background: url('../img/run-Sailor\ Moon\ \(1\).png');
+      animation: player-run-right 0.5s steps(6) infinite;
+      bottom: 1%;
+  }
+
+  .player-run-right1 {
+      width: 100px;
+      left: 15%;
+      background: url('../img/run-Sailor\ Mars.png');
+      animation: player-run-right 0.5s steps(6) infinite;
+      bottom: 1%;
+  }
+
+  @keyframes player-run-right {
+      0% {
+          background-position: 0
+      }
+      100% {
+          background-position: -604px
+      }
+  }
+
+  .jump {
+      z-index: 5;
+      height: 177px;
+      position: absolute;
+      width: 95px;
+      background: url('../img/Jump2\ -\ Sailor\ Moon.png');
+      animation: jump 1s steps(8) infinite;
+      padding: 0%;
+      margin: 0%;
+  }
+
+  .jump1 {
+      z-index: 5;
+      height: 177px;
+      position: absolute;
+      width: 100px;
+      background: url('../img/marsJump.png');
+      animation: player-jump 1s steps(8) infinite;
+      padding: 0%;
+      margin: 0%;
+  }
+
+  @keyframes player-jump {
+      0% {
+          background-position: 0px;
+          left: 15%;
+          bottom: 30%;
+      }
+      50% {
+          background-position: 800px;
+          bottom: 30%;
+          left: 15%;
+      }
+      100% {
+          background-position: 800px;
+          left: 15%;
+      }
+  }
+
+  @keyframes jump {
+      0% {
+          background-position: 0px;
+          left: 15%;
+          bottom: 30%;
+      }
+      50% {
+          background-position: 752px;
+          bottom: 30%;
+          left: 15%;
+      }
+      100% {
+          background-position: 752px;
+          left: 15%;
+      }
+  }
+
+  .dead {
+      width: 116.5px;
+      left: 15%;
+      bottom: 0.05%;
+      background: url('../img/dead\ -\ Sailor\ Moon.png');
+      animation: die-sm 2s steps(5);
+      animation-fill-mode: forwards;
+  }
+
+  @keyframes die-sm {
+      0% {
+          background-position: 0
+      }
+      100% {
+          background-position: -581px
+      }
+  }
+
+  .dead1 {
+      width: 120px;
+      height: 150px;
+      left: 15%;
+      bottom: 0.09%;
+      background: url('../img/dead\ -\ Sailor\ Mars.png');
+      animation: player-dead 2s steps(5);
+      animation-fill-mode: forwards;
+  }
+
+  @keyframes player-dead {
+      0% {
+          background-position: 0
+      }
+      100% {
+          background-position: -611px
+      }
+  }
+
+  /*NPC*/
+
+  .npc-run {
+      z-index: 5;
+      width: 70px;
+      height: 100px;
+      bottom: 1%;
+      position: absolute;
+      background: url('../img/fantasma\ -\ Yasha\ 2.png');
+      animation: npc 2.5s steps(6) infinite;
+      margin: 0;
+      padding: 0;
+  }
+
+  @keyframes npc {
+      0% {
+          background-position: 0px;
+          right: 0%;
+      }
+      25% {
+          background-position: 419px;
+          right: 25%;
+      }
+      50% {
+          background-position: 0px;
+          right: 50%;
+      }
+      75% {
+          background-position: 419px;
+          right: 75%;
+      }
+      100% {
+          background-position: 0px;
+          right: 86%
+      }
+  }
+
+  /*COLECCIONABLE*/
+
+  #coin {
+      z-index: 5;
+      width: 58px;
+      height: 52px;
+      bottom: -55%;
+      position: relative;
+      /*border: solid 5px orange;*/
+  }
+
+  .coin-animated {
+      background: url('../img/gema.png');
+      animation: coin-animated 4s steps(6) infinite;
+  }
+
+  @keyframes coin-animated {
+      0% {
+          right: -95%;
+          background-position: 0;
+      }
+      25% {
+          right: -75%;
+          background-position: 350px;
+      }
+      50% {
+          right: -50%;
+          background-position: 0;
+      }
+      75% {
+          right: -25%;
+          background-position: 350px;
+      }
+      100% {
+          right: 5%;
+          background-position: 0;
+      }
+  }
+
+  /*FONDO*/
+
+  .game {
+      background: url('../img/layers/cyberpunk-street.png');
+  }
+
+  #game-runner {
+      width: 1200px;
+      height: 500px;
+      margin: .5% auto;
+      position: relative;
+      box-shadow: -2px -2px 1px #000, 2px 2px 1px #000, -2px 2px 1px #000, 2px -2px 1px #000;
+  }
+
+  #score {
+      font-size: 1.2em;
+      top: 1%;
+      z-index: 100;
+      color: white;
+      position: relative;
+      text-align: center;
+  }
+
+  #game-info {
+      z-index: 5;
+      position: relative;
+      color: white;
+      text-align: center;
+      font-size: 2em;
+      line-height: .5%;
+      top: 5%;
+  }
+
+  .no-visibility {
+      visibility: hidden;
+  }
+
+  #info-primary {
+      text-shadow: -2px -2px 1px #000, 2px 2px 1px #000, -2px 2px 1px #000, 2px -2px 1px #000;
+      margin-top: 50px;
+      font-size: 80px !important;
+      border: solid 10px red;
+      box-shadow: -2px -2px 1px #000, 2px 2px 1px #000, -2px 2px 1px #000, 2px -2px 1px #000;
+  }
+
+  .info-endgame {
+      margin: 0;
+      font-size: 3em;
+  }
+
+  @keyframes scroll {
+      0% {
+          background-position-x: 0px;
+      }
+      100% {
+          background-position-x: -1200px;
+      }
+  }
+
+  .animation {
+      /*min-height: 460px;*/
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      left: 0;
+      background-repeat: repeat-x;
+      background-size: cover;
+  }
+
+  .far {
+      background: url('../img/layers/far-buildings.png');
+      z-index: 1;
+      animation: scroll 29s linear infinite;
+  }
+
+  .building {
+      background: url('../img/layers/back-buildings.png');
+      z-index: 2;
+      animation: scroll 24s linear infinite;
+  }
+
+  .ground {
+      background: url('../img/layers/foreground.png')repeat-x;
+      animation: scroll 15s linear infinite;
+      z-index: 3;
+  }
